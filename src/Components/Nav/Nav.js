@@ -1,5 +1,6 @@
 import React ,{useEffect, useState}from 'react'
 import'./Nav.css'
+import {Link} from 'react-router-dom'
 const Nav = () => {
 
     const [show,setShow]=useState(false)
@@ -30,12 +31,16 @@ const Nav = () => {
   return (
     <nav className={`nav ${show && 'nav__black'}`}>
         <div className="nav__content">
-
+<Link to='/'>
             <img src='https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo.png'
             className='nav__logo'/>
 
+</Link>
+
+<Link to='/profile'>
             <img src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'
             className='nav__avatar'/>
+            </Link>
         </div>
 
     </nav>
